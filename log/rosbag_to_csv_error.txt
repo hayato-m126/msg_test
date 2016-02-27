@@ -1,0 +1,4 @@
+hyt@hytPortable:~$ rosrun rosbag_to_csv rosbag_to_csv.py
+rosbag_to_csv start!!
+Converting....
+[WARN] [WallTime: 1456574707.550976] fail: 'ascii' codec can't decode byte 0xe3 in position 431: ordinal not in range(128)

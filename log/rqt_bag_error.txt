@@ -1,0 +1,22 @@
+hyt@hytPortable:~$ rqt_bag
+Loading /home/hyt/2016-02-27-21-02-15.bag
+Done loading /home/hyt/2016-02-27-21-02-15.bag
+Exception in thread Thread-10:
+Traceback (most recent call last):
+  File "/usr/lib/python2.7/threading.py", line 810, in __bootstrap_inner
+    self.run()
+  File "/opt/ros/indigo/lib/python2.7/dist-packages/rqt_bag/message_loader_thread.py", line 83, in run
+    msg_data = self._get_message(bag, playhead_position)
+  File "/opt/ros/indigo/lib/python2.7/dist-packages/rqt_bag/message_loader_thread.py", line 96, in _get_message
+    msg_data = self.timeline.read_message(bag, position)
+  File "/opt/ros/indigo/lib/python2.7/dist-packages/rqt_bag/bag_timeline.py", line 473, in read_message
+    return bag._read_message(position)
+  File "/opt/ros/indigo/lib/python2.7/dist-packages/rosbag/bag.py", line 978, in _read_message
+    return self._reader.seek_and_read_message_data_record(position, raw)
+  File "/opt/ros/indigo/lib/python2.7/dist-packages/rosbag/bag.py", line 2467, in seek_and_read_message_data_record
+    msg_type = _get_message_type(connection_info)
+  File "/opt/ros/indigo/lib/python2.7/dist-packages/rosbag/bag.py", line 1563, in _get_message_type
+    message_type = genpy.dynamic.generate_dynamic(info.datatype, info.msg_def)[info.datatype]
+  File "/opt/ros/indigo/lib/python2.7/dist-packages/genpy/dynamic.py", line 168, in generate_dynamic
+    tmp_file.file.write(full_text.encode())
+UnicodeDecodeError: 'ascii' codec can't decode byte 0xe3 in position 431: ordinal not in range(128)
